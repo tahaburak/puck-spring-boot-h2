@@ -9,5 +9,4 @@ public class H2demoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(H2demoApplication.class, args);
 	}
-
 }
