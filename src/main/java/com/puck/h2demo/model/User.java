@@ -17,9 +17,7 @@ import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
-/**
- * Created by burak on 2019-05-19
- */
+/** Created by burak on 2019-05-19 */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,30 +25,30 @@ import java.util.Date;
 @Getter
 @Setter
 @JsonRootName(value = "User")
-@JsonPropertyOrder({ "fullName" })
+@JsonPropertyOrder({"fullName"})
 @JsonIgnoreProperties(
-		//   value = {"birthDate"},
-		ignoreUnknown = true)
+    //   value = {"birthDate"},
+    ignoreUnknown = true)
 public class User {
-	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private long id;
+  @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+  private long id;
 
-	private String name;
-	private String surname;
+  private String name;
+  private String surname;
 
-	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private Date birthDate;
+  @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+  private Date birthDate;
 
-	@JsonGetter("age")
-	private int age() {
+  @JsonGetter("age")
+  private int age() {
 
-		LocalDate birthDateLocalDate =
-				this.birthDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		return (int) ChronoUnit.YEARS.between(birthDateLocalDate, LocalDate.now());
-	}
+    LocalDate birthDateLocalDate =
+        this.birthDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    return (int) ChronoUnit.YEARS.between(birthDateLocalDate, LocalDate.now());
+  }
 
-	@JsonGetter("fullName")
-	public String fullName() {
-		return this.name + " " + this.surname;
-	}
+  @JsonGetter("fullName")
+  public String fullName() {
+    return this.name + " " + this.surname;
+  }
 }

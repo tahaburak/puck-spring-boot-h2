@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "9f750f31-44f2-4557-9b09-236eb1603cae",
+		"name": "Puck-H2-Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{baseServiceAddress}}/ping",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{baseServiceAddress}}",
+						"ping"
+					]
+				},
+				"description": "pong"
+			},
+			"response": []
+		},
+		{
+			"name": "get dummy user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{userService}}/{{endPointDummy}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{userService}}",
+						"{{endPointDummy}}"
+					]
+				},
+				"description": "returns initialized dummy user"
+			},
+			"response": []
+		},
+		{
+			"name": "generate dummy user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{userService}}/{{endPointDummyList}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{userService}}",
+						"{{endPointDummyList}}"
+					]
+				},
+				"description": "generates dummy user"
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{userService}}/{{endPointDummyList}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{userService}}",
+						"{{endPointDummyList}}"
+					]
+				},
+				"description": "returns user. If json-server is active will be used as the source, else it'll check h2 db. If none is avaliable it'll return dummy users."
+			},
+			"response": []
+		},
+		{
+			"name": "generate dummy users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{userService}}/{{endPointDummyList}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{userService}}",
+						"{{endPointDummyList}}"
+					]
+				},
+				"description": "generates dummy users with given value."
+			},
+			"response": []
+		},
+		{
+			"name": "h2 create users table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{h2Service}}/{{endPointCreateUsers}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{h2Service}}",
+						"{{endPointCreateUsers}}"
+					]
+				},
+				"description": "creates users table in h2 db."
+			},
+			"response": []
+		},
+		{
+			"name": "h2 drop users table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{h2Service}}/{{endPointCreateUsers}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{h2Service}}",
+						"{{endPointCreateUsers}}"
+					]
+				},
+				"description": "drops users table in h2 db."
+			},
+			"response": []
+		},
+		{
+			"name": "h2 insert users table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{h2Service}}/{{endPointInsertUsers}}/:number",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{h2Service}}",
+						"{{endPointInsertUsers}}",
+						":number"
+					],
+					"variable": [
+						{
+							"key": "number",
+							"value": "10"
+						}
+					]
+				},
+				"description": "insert users table in h2 db with given value."
+			},
+			"response": []
+		},
+		{
+			"name": "h2 refresh users table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/{{h2Service}}/{{endPointRefreshUsers}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"{{h2Service}}",
+						"{{endPointRefreshUsers}}"
+					]
+				},
+				"description": "runs drop, create and insert services."
+			},
+			"response": []
+		}
+	]
+}

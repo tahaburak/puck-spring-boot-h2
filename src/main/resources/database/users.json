@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maida",
+      "surname": "Gottlieb",
+      "birthDate": "1997-04-01T00:29:08.680+0000"
+    },
+    {
+      "id": 2,
+      "name": "Elza",
+      "surname": "Breitenberg",
+      "birthDate": "1969-05-15T01:34:46.452+0000"
+    },
+    {
+      "id": 3,
+      "name": "Ling",
+      "surname": "Yundt",
+      "birthDate": "1992-07-11T10:36:28.226+0000"
+    },
+    {
+      "id": 4,
+      "name": "Shalanda",
+      "surname": "Lockman",
+      "birthDate": "1980-07-08T09:03:21.956+0000"
+    },
+    {
+      "id": 5,
+      "name": "Joan",
+      "surname": "Daugherty",
+      "birthDate": "1962-12-31T19:55:08.770+0000"
+    },
+    {
+      "id": 6,
+      "name": "Ed",
+      "surname": "Kemmer",
+      "birthDate": "1959-07-01T09:40:09.409+0000"
+    },
+    {
+      "id": 7,
+      "name": "Dale",
+      "surname": "Kerluke",
+      "birthDate": "1968-01-19T14:37:39.279+0000"
+    },
+    {
+      "id": 8,
+      "name": "Emmitt",
+      "surname": "Fahey",
+      "birthDate": "1958-08-12T02:57:49.394+0000"
+    },
+    {
+      "id": 9,
+      "name": "Israel",
+      "surname": "Schmitt",
+      "birthDate": "1967-03-25T00:29:08.680+0000"
+    },
+    {
+      "id": 10,
+      "name": "Albina",
+      "surname": "Miller",
+      "birthDate": "1991-06-29T05:35:35.945+0000"
+    }
+  ]
+}
