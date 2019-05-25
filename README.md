@@ -40,8 +40,11 @@ If H2 fails call refresh http://localhost:7777/h2/refresh/users
 ## Tools & Libraries
 
 - https://start.spring.io/
+- https://www.gitignore.io/
+- https://github.com/google/google-java-format
 - https://www.h2database.com/
 - https://projectlombok.org/
+- https://github.com/FasterXML/jackson
 - https://swagger.io/docs/specification/2-0/basic-structure/
 - https://github.com/ulisesbocchio/jasypt-spring-boot (ENCRYPTION)
 - https://github.com/DiUS/java-faker
