@@ -11,25 +11,22 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-/**
- * Created by burak on 2019-05-19
- */
+/** Created by burak on 2019-05-19 */
 @Service
 public class JsonServerUserClient {
-	private RestTemplate restTemplate;
+  private RestTemplate restTemplate;
 
-	public JsonServerUserClient(RestTemplateBuilder restTemplateBuilder) {
-		this.restTemplate = restTemplateBuilder.build();
-	}
+  public JsonServerUserClient(RestTemplateBuilder restTemplateBuilder) {
+    this.restTemplate = restTemplateBuilder.build();
+  }
 
-	public List<User> getUsers() {
-		ResponseEntity<List<User>> responseEntity =
-				restTemplate.exchange(
-						Constants.JSON_SERVER_USERS,
-						HttpMethod.GET,
-						null,
-						new ParameterizedTypeReference<List<User>>() {
-						});
-		return responseEntity.getBody();
-	}
+  public List<User> getUsers() {
+    ResponseEntity<List<User>> responseEntity =
+        restTemplate.exchange(
+            Constants.JSON_SERVER_USERS,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<List<User>>() {});
+    return responseEntity.getBody();
+  }
 }

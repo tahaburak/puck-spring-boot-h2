@@ -1,12 +1,10 @@
 package com.puck.h2demo.service;
 
-/**
- * Created by burak on 2019-05-19
- */
+/** Created by burak on 2019-05-19 */
 public interface IH2Service {
-	void createUsersTable();
+  void createUsersTable();
 
-	void dropUsersTable();
+  void dropUsersTable();
 
-	void insertUsersTable(int num);
+  void insertUsersTable(int num);
 }

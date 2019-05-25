@@ -8,23 +8,21 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * Created by burak on 2019-05-19
- */
+/** Created by burak on 2019-05-19 */
 @Component
 public class UserDao implements IUserDao {
 
-	private IH2Dao ih2Dao;
+  private IH2Dao ih2Dao;
 
-	@Autowired
-	UserDao(IH2Dao ih2Dao) {
-		this.ih2Dao = ih2Dao;
-	}
+  @Autowired
+  UserDao(IH2Dao ih2Dao) {
+    this.ih2Dao = ih2Dao;
+  }
 
-	@Override
-	public List<User> getUsers() {
-		// language=H2
-		String sql = "SELECT * FROM USERS";
-		return ih2Dao.queryList(sql);
-	}
+  @Override
+  public List<User> getUsers() {
+    // language=H2
+    String sql = "SELECT * FROM USERS";
+    return ih2Dao.queryList(sql);
+  }
 }
